@@ -14,7 +14,7 @@
 
 <p><img alt="" height="1320" id="myImg" img="" onload="loadImage()" src="flipped1.jpg" width="800" /></p>
 </body>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 
 	//Sets default value in case user doesn't set it
 	AutoTools.setDefaultValues({
@@ -23,8 +23,8 @@
 	//function will update the div with id "updatable" with whatever text is passed in the parameter
 	var updateValue = function(value){
 	//document.querySelector("#myImg").src = value;
-      	//document.getElementById('myImg').src = value;
-	document.getElementById('myImg').src = valueToUpdate;
+      	document.getElementById('myImg').src = value;
+	//document.getElementById('myImg').src = valueToUpdate;
       	//document.querySelector("#updatable").innerHTML = value;
 	}
 	//Because this function is present the "Update" option will appear in the Tasker configuration screen. All the values used as inputs there will be set in the "values" parameter here
@@ -36,6 +36,8 @@
 
 </script><!--/*
 	
+
+
 	This example enables the "Update" option in the AutoTools Web Screen configuration page in Tasker.
 	This happens because the "autoToolsUpdateValues" function is present on the page below.
 	The following task in Tasker will make the text "initial value" show up initially and after 3 seconds the text "different value" will show.
