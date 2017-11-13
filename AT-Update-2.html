@@ -22,8 +22,8 @@
 	});
 	//function will update the div with id "updatable" with whatever text is passed in the parameter
 	var updateValue = function(value){
-		document.querySelector("#myImg").src = value;
-      //document.getElementById("myImg").src = value;
+	//document.querySelector("#myImg").src = value;
+      	document.getElementById('myImg').src = value;
       	//document.querySelector("#updatable").innerHTML = value;
 	}
 	//Because this function is present the "Update" option will appear in the Tasker configuration screen. All the values used as inputs there will be set in the "values" parameter here
