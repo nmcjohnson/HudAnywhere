@@ -5,6 +5,7 @@
 	<script src="autotoolsfunctions.js"></script>
 	<link rel="stylesheet" type="text/css" href="autotoolsstyle.css" />
 	<meta name="autotoolswebscreen" type="variablejs" id="valueToUpdate" label="Value To Update" description="Value used to update the page" defaultValue="Some Value" hint="Some Value" />
+	<meta name="autotoolswebscreen" type="variablejs" id="reload" label="Reload" description="spot in HUD load process" defaultValue="fin" hint="fin,non" />
 </head>
 <body>
 <p>&nbsp;</p>
@@ -13,8 +14,17 @@
 
 <p>&nbsp;</p>
 
-<img alt="" height="1320" id="myImg" img="" onload="loadImage()" src="storage/emulated/0/sdcard/AutoTools/lipped1.jpg" width="800" />
+<img id="myImg" img="" onload="loadImage()" src="flipped1.jpg" />
 </body>
+<script type="text/javascript">
+	
+function loadImage() {
+    	var reload = "fin"
+      	AutoTools.sendCommand(reload,'hud', true);
+      	AutoTools.showToast(reload)
+    
+		}
+</script>
 <script type="text/javascript">
 
 	//Sets default value in case user doesn't set it
@@ -23,8 +33,9 @@
 	});
 	//function will update the div with id "updatable" with whatever text is passed in the parameter
 	var updateValue = function(value){
-	//document.querySelector("#myImg").src = value;
-      	document.getElementById('myImg').src = value;
+	document.querySelector("#myImg").src = value;
+		AutoTools.showToast(valueToUpdate)
+      	//document.getElementById('myImg').src = value;
 	//document.getElementById('myImg').src = valueToUpdate;
       	//document.querySelector("#updatable").innerHTML = value;
 	}
