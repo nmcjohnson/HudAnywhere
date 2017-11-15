@@ -14,8 +14,9 @@
 
 <p>&nbsp;</p>
 
-<img id="myImg" img="" onload="loadImage()" src="flipped1.jpg" />
-</body>
+<!-- <img id="myImg" img="" onload="loadImage()" src="flipped1.jpg" /> -->
+
+
 <script type="text/javascript">
 	
 function loadImage() {
@@ -28,9 +29,9 @@ function loadImage() {
 <script type="text/javascript">
 
 	//Sets default value in case user doesn't set it
-	AutoTools.setDefaultValues({
-		"valueToUpdate": "flipped1.jpg"
-	});
+	//AutoTools.setDefaultValues({
+		//"valueToUpdate": "flipped1.jpg"
+	//});
 
 	var updateValue = function(value){
 	document.querySelector("#myImg").src = value;
@@ -46,4 +47,8 @@ function loadImage() {
 	}
 	updateValue(valueToUpdate);
 
-</script></html>
+</script>
+	
+<img id="myImg" img="" onload="loadImage()" src="valueToUpdate" />
+	</body>
+	</html>
