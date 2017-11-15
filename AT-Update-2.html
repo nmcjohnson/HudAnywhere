@@ -8,15 +8,6 @@
 	<meta name="autotoolswebscreen" type="variablejs" id="reload" label="Reload" description="spot in HUD load process" defaultValue="fin" hint="fin,non" />
 </head>
 <body>
-<p>&nbsp;</p>
-
-<div id="updatable">&nbsp;</div>
-
-<p>&nbsp;</p>
-
-<!-- <img id="myImg" img="" onload="loadImage()" src="flipped1.jpg" /> -->
-
-
 <script type="text/javascript">
 	
 function loadImage() {
@@ -34,9 +25,9 @@ function loadImage() {
 	//});
 
 	var updateValue = function(value){
-	document.querySelector("#myImg").src = value;
+	//document.querySelector("#myImg").src = value;
 		AutoTools.showToast(valueToUpdate)
-      	//document.getElementById('myImg').src = value;
+      	document.getElementById('myImg').src = value;
 	//document.getElementById('myImg').src = valueToUpdate;
       	//document.querySelector("#updatable").innerHTML = value;
 	}
